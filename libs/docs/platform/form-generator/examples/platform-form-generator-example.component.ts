@@ -1,16 +1,7 @@
-import { Component, inject, TemplateRef, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Validators } from '@angular/forms';
 
 import { JsonPipe } from '@angular/common';
-import {
-    ButtonBarComponent,
-    DialogBodyComponent,
-    DialogComponent,
-    DialogFooterComponent,
-    DialogHeaderComponent,
-    DialogService,
-    TitleComponent
-} from '@fundamental-ngx/core';
 import { FdDate, provideDateTimeFormats } from '@fundamental-ngx/core/datetime';
 import { PlatformButtonModule } from '@fundamental-ngx/platform/button';
 import {
@@ -27,16 +18,6 @@ export const dummyAwaitablePromise = (timeout = 200): Promise<boolean> =>
         }, timeout);
     });
 
-enum BuildTool {
-    Docker = 'Docker',
-    Golang = 'Golang',
-    Gradle = 'Gradle',
-    Maven = 'Maven',
-    Mta = 'Mta',
-    Npm = 'Npm',
-    Python = 'Python'
-}
-
 @Component({
     selector: 'fdp-platform-form-generator-example',
     templateUrl: './platform-form-generator-example.component.html',
@@ -46,21 +27,10 @@ enum BuildTool {
         provideDateTimeFormats()
     ],
     standalone: true,
-    imports: [
-        PlatformFormGeneratorModule,
-        PlatformButtonModule,
-        JsonPipe,
-        DialogComponent,
-        ButtonBarComponent,
-        TitleComponent,
-        DialogHeaderComponent,
-        DialogBodyComponent,
-        DialogFooterComponent
-    ]
+    imports: [PlatformFormGeneratorModule, PlatformButtonModule, JsonPipe]
 })
 export class PlatformFormGeneratorExampleComponent {
     @ViewChild(FormGeneratorComponent) formGenerator: FormGeneratorComponent;
-    private _dialogService = inject(DialogService);
 
     loading = false;
 
@@ -258,52 +228,8 @@ export class PlatformFormGeneratorExampleComponent {
         }
     ];
 
-    questions2: DynamicFormItem<{}, any>[] = [
-        {
-            type: 'header',
-            name: 'buildToolHeader',
-            message: '',
-            guiOptions: {
-                additionalData: {
-                    header: 'Which build tool do you currently use?',
-                    ignoreTopMargin: true
-                }
-            }
-        },
-        {
-            type: 'radio',
-            name: 'buildTool',
-            message: '',
-            guiOptions: {
-                inline: true
-            },
-            choices: [
-                BuildTool.Docker,
-                BuildTool.Golang,
-                BuildTool.Gradle,
-                BuildTool.Maven,
-                BuildTool.Mta,
-                BuildTool.Npm,
-                BuildTool.Python
-            ].map((tool) => ({
-                label: tool.charAt(0).toUpperCase() + tool.slice(1).toLocaleLowerCase(),
-                value: tool
-            })),
-            validators: [Validators.required]
-        }
-    ];
-
     onFormCreated(): void {
         this.formCreated = true;
-    }
-
-    openDialog(dialog: TemplateRef<any>): void {
-        const dialogRef = this._dialogService.open(dialog, {
-            responsivePadding: true,
-            ariaLabelledBy: 'fd-dialog-header-10',
-            ariaDescribedBy: 'fd-dialog-body-10',
-            focusTrapped: true
-        });
     }
 
     async onFormSubmitted(value: DynamicFormValue): Promise<void> {
