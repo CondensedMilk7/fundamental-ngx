@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.53.2-rc.13](https://github.com/SAP/fundamental-ngx/compare/v0.53.2-rc.12...v0.53.2-rc.13) (2024-11-26)
+
+
+### Bug Fixes
+
+* **core:** prevent grid list item spacing click. ([#12735](https://github.com/SAP/fundamental-ngx/issues/12735)) ([ccf00b9](https://github.com/SAP/fundamental-ngx/commit/ccf00b91fcce37e91dd0aadc30e0d05aa2f81f9b)), closes [#12633](https://github.com/SAP/fundamental-ngx/issues/12633) [#12633](https://github.com/SAP/fundamental-ngx/issues/12633)
+
+
+
+
+
+## [0.53.2-rc.12](https://github.com/SAP/fundamental-ngx/compare/v0.53.2-rc.11...v0.53.2-rc.12) (2024-11-26)
+
+
+### Bug Fixes
+
+* **core,platform:** wizard template, a11y updates ([#12720](https://github.com/SAP/fundamental-ngx/issues/12720)) ([d4a5f8b](https://github.com/SAP/fundamental-ngx/commit/d4a5f8b8bb2a7d99b5d6e979f911e7ca537f900d))
+
+
+
+
+
+## [0.53.2-rc.11](https://github.com/SAP/fundamental-ngx/compare/v0.53.2-rc.10...v0.53.2-rc.11) (2024-11-25)
+
+
+### Bug Fixes
+
+* **core:** notification a11y improvements ([#12752](https://github.com/SAP/fundamental-ngx/issues/12752)) ([8a41b6f](https://github.com/SAP/fundamental-ngx/commit/8a41b6fb840bb5b143f6c2b4d83b37ae6d5e780a))
+
+
+
+
+
+## [0.53.2-rc.10](https://github.com/SAP/fundamental-ngx/compare/v0.53.2-rc.9...v0.53.2-rc.10) (2024-11-25)
+
+**Note:** Version bump only for package fundamental-ngx
+
+
+
+
+
 ## [0.53.2-rc.9](https://github.com/SAP/fundamental-ngx/compare/v0.53.2-rc.8...v0.53.2-rc.9) (2024-11-22)
 
 
