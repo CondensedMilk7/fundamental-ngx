@@ -39,18 +39,6 @@ export class NoDataExampleComponent {
         dialog: {
             url: 'assets/images/sapIllus-Dialog-NoMail.svg',
             id: 'sapIllus-Dialog-NoMail'
-        },
-        base: {
-            url: 'assets/images/sapIllus-Dialog-NoMail.svg',
-            id: 'sapIllus-Dialog-NoMail'
-        },
-        spot: {
-            url: 'assets/images/sapIllus-Spot-NoMail.svg',
-            id: 'sapIllus-Spot-NoEmail'
-        },
-        dot: {
-            url: 'assets/images/sapIllus-Spot-NoMail.svg',
-            id: 'sapIllus-Spot-NoEmail'
         }
     };
 }
